@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Restricting negative values idea from https://www.w3docs.com/snippets/html/how-to-allow-only-positive-numbers-in-the-input-number-type.html-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="stylesheets/calculator.css">
+</head>
+
+<body>
+    <section class="content-container">
+        <section class="top-container">
+
+        </section>
+        <h1>Grade Calculator</h1>
+        <section class="middle-container">
+            <section class="box">
+                <h2>Activities</h2>
+                <p>Give grades to the numeric activities: </p>
+                <table id="table" style="width:97.3%">
+                    <tr>
+                        <th>Name</th>
+                        <th>Short Name</th>
+                        <th>Weight</th>
+                        <th>Grade</th>
+                        <th>Percent</th>
+                    </tr>
+                    <tr>
+                        <td>Activity 1</td>
+                        <td>A1</td>
+                        <td><input id="a1-w" type="number" min="0" oninput="validity.valid||(value='');"></td>
+                        <td>
+                            <input id="a1-g1" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                            /
+                            <input id="a1-g2" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                        </td>
+                        <td id="a1-p"></td>
+                    </tr>
+                    <tr>
+                        <td>Activity 2</td>
+                        <td>A2</td>
+                        <td><input id="a2-w" type="number" min="0" oninput="validity.valid||(value='');"></td>
+                        <td>
+                            <input id="a2-g1" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                            /
+                            <input id="a2-g2" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                        </td>
+                        <td id="a2-p"></td>
+                    </tr>
+                    <tr>
+                        <td>Activity 3</td>
+                        <td>A3</td>
+                        <td><input id="a3-w" type="number" min="0" oninput="validity.valid||(value='');"></td>
+                        <td>
+                            <input id="a3-g1" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                            /
+                            <input id="a3-g2" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                        </td>
+                        <td id="a3-p"></td>
+                    </tr>
+                    <tr>
+                        <td>Activity 4</td>
+                        <td>A4</td>
+                        <td><input id="a4-w" type="number" min="0" oninput="validity.valid||(value='');"></td>
+                        <td>
+                            <input id="a4-g1" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                            /
+                            <input id="a4-g2" type="number" min="0" oninput="validity.valid||(value='');"
+                                onkeyup="percent()">
+                        </td>
+                        <td id="a4-p"></td>
+                    </tr>
+                </table>
+                <button id="add-button">Add Activity</button>
+                <h2 id="result">Result</h2>
+                <h3 id="total-result"><br></h3>
+                <ul>
+                    <button id="weighted-button">Weighted</button>
+                    <button id="mean-button">Mean</button>
+                </ul>
+            </section>
+        </section>
+        <section class="bottom-container">
+
+        </section>
+    </section>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
